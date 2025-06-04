@@ -1,7 +1,11 @@
+// lib/supabaseClient.js
 import { createClient } from "@supabase/supabase-js";
 
-const superbaseUrl='https://jbcilbwocgzmoajscpzd.supabase.co';
+const superbaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL; // This is a local variable
+const superbaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const superbaseAnonKey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpiY2lsYndvY2d6bW9hanNjcHpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg5NDE4NDksImV4cCI6MjA2NDUxNzg0OX0.qPUpWB_FmZCvEFNwICR97-J5LNWfSEhEa0xnwILS-7w';
+if (!superbaseUrl || !superbaseAnonKey) {
+  console.error("Supabase URL or Anon Key are not set in environment variables.");
+}
 
-export const superbase= createClient(superbaseUrl,superbaseAnonKey )
+export const superbase = createClient(superbaseUrl, superbaseAnonKey); // Only 'superbase' is exported

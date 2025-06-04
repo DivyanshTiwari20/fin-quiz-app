@@ -10,8 +10,8 @@ export default function ResultsClient() {
   const score = searchParams.get('score');
   const coins = searchParams.get('coins');
 
-  const handleGoHome = () => {
-    window.location.href = '/'; // Adjust this to your actual home page route if different
+  const handleGoQuiz = () => {
+    window.location.href = '/quiz'; // Adjust this to your actual home page route if different
   };
 
   return (
@@ -46,7 +46,7 @@ export default function ResultsClient() {
         </CardContent>
         <div className="pt-6">
           <Button
-            onClick={handleGoHome}
+            onClick={handleGoQuiz}
             className="w-full py-3 text-lg font-bold bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
           >
             Go to Home

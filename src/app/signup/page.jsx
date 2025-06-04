@@ -11,6 +11,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 export default function SignupPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' }); // For success/error messages
   const router = useRouter();
@@ -56,6 +58,22 @@ export default function SignupPage() {
               {message.text}
             </div>
           )}
+          <Input
+            placeholder="Enter your username"
+            value={String}
+            onChange={(e) => setName(e.target.value)}
+            type="string"
+
+            className="w-full p-3 rounded-md border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+          />
+          <Input
+            placeholder="Enter your name"
+            value={String}
+            onChange={(e) => setName(e.target.value)}
+            type="string"
+
+            className="w-full p-3 rounded-md border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+          />
           <Input
             placeholder="Enter your email"
             value={email}
