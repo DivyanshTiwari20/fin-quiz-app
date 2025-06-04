@@ -19,10 +19,6 @@ Welcome to FinQuiz, a dynamic and interactive financial quiz application built w
 
 ## 📸 Screenshots
 
-<img src="/public/github-home.png" alt="Home Page" width="400"/>
-<img src="/public/github-quiz.png" alt="Quiz in Progress" width="400"/>
-<img src="/public/github-score.png" alt="Interim Results" width="400"/>
-
 **1. Home/Landing Page**
 ![Home Page](/public//github-home.png)
 
