@@ -19,10 +19,23 @@ Welcome to FinQuiz, a dynamic and interactive financial quiz application built w
 
 ## 📸 Screenshots
 
+*(To make your README truly shine, replace these placeholders with actual screenshots of your app!)*
 
-**1. Home/**
-![Home Page](/public/desktop.png)
+**1. Home/Landing Page**
+*(A compelling shot of your app's entry point)*
+![Home Page](https://via.placeholder.com/800x450?text=Home+Page+Screenshot)
 
+**2. Quiz in Progress**
+*(Show a question with options)*
+![Quiz in Progress](https://via.placeholder.com/800x450?text=Quiz+In+Progress+Screenshot)
+
+**3. Interim Results Screen**
+*(Show the score summary after a batch)*
+![Interim Results](https://via.placeholder.com/800x450?text=Interim+Results+Screenshot)
+
+**4. Final Results Page**
+*(The final score and coins summary)*
+![Final Results](https://via.placeholder.com/800x450?text=Final+Results+Screenshot)
 
 ---
 
@@ -35,71 +48,86 @@ Follow these steps to get your FinQuiz app running locally:
 ```bash
 git clone [https://github.com/DivyanshTiwari20/fin-quiz-app.git](https://github.com/DivyanshTiwari20/fin-quiz-app.git)
 cd fin-quiz-app
+```
 
+### 2. Install Dependencies
+Using Yarn (recommended):
 
-2. Install Dependencies
-Using Yarn (recommended as per your Vercel logs):
-
-Bash
-
+```bash
 yarn install
+```
 Or using npm:
-
-Bash
+```
 
 npm install
-3. Configure Environment Variables
+```
+### 3. Configure Environment Variables
 Create a .env.local file in the root of your project and add your Supabase credentials:
 
-Code snippet
-
+```
 # .env.local
 NEXT_PUBLIC_SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+```
 You can find these keys in your Supabase project under Project Settings > API.
-4. Set Up Your Supabase Database
+
+### 4. Set Up Your Supabase Database
 You'll need a questions table in your Supabase project.
 
-Create the questions table:
-Go to your Supabase dashboard, navigate to Table Editor, and create a new table named questions.
+### Quick SQL Setup (Recommended)
+Copy and run the following SQL in your Supabase dashboard's SQL Editor to create the required table:
+```
+sql
+create table public.questions (
+  id uuid primary key default gen_random_uuid(),
+  question text not null,
+  options jsonb not null,
+  correct text not null,
+  created_at timestamptz default now()
+);
+```
+Example Insert Statement:
+```
+sql
+insert into public.questions (question, options, correct) values (
+  'What is GDP?',
+  '{"a": "Gross Domestic Product", "b": "General Data Protocol", "c": "Global Development Plan", "d": "Government Debt Policy"}',
+  'a'
+);
+```
+#### 💡 Tip: 
+You can add more questions using similar INSERT statements or directly via the Supabase Table Editor.
 
-Define Columns:
-Add the following columns:
 
-id (type: UUID, Primary Key, Default: gen_random_uuid())
-question (type: text, Not Null)
-options (type: jsonb, Not Null) - This column will store your question options as a JSON object, e.g., {"a": "Option A", "b": "Option B", "c": "Option C", "d": "Option D"}.
-correct (type: text, Not Null) - This will store the key of the correct option, e.g., "a" or "b".
-(Optional: Add created_at with timestampz and default now() if you want timestamps)
-Populate with Data:
-Add some sample questions directly in the Supabase Table Editor or via SQL.
-Example Row:
 
-| id                                   | question                       | options                                                              | correct |
-| :----------------------------------- | :----------------------------- | :------------------------------------------------------------------- | :------ |
-| a1b2c3d4-e5f6-7890-1234-567890abcdef | What is GDP?                   | {"a": "Gross Domestic Product", "b": "General Data Protocol", "c": "Global Development Plan", "d": "Government Debt Policy"} | a     |
-| ...                                | ...                          | ...                                                                | ...   |
-
-5. Run the Development Server
-Bash
-
+### 5. Run the Development Server
+```
 yarn dev
-# or
+```
+ or
+ ```
 npm run dev
-Open your browser and visit http://localhost:3000.
+```
+Open your browser and visit `http://localhost:3000`.
 
-🚢 Deployment
+## 🚢 Deployment
 This application is configured for easy deployment with Vercel. If you've connected your Git repository to Vercel, new deployments will automatically be triggered on every push to your main branch.
 
-Important: Remember to add your NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY as Environment Variables directly in your Vercel project settings under Project Settings > Environment Variables.
+#### Important: 
+Remember to add your `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` as Environment Variables directly in your Vercel project settings under `Project Settings` > `Environment Variables`.
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome! If you have suggestions or want to improve the app:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature-name).
-Make your changes. 4. Commit your changes (git commit -m 'feat: Add new feature').
-Push to the branch (git push origin feature/your-feature-name).
-Open a Pull Request.
-📄 License
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/your-feature-name).
+3. Make your changes.
+4. Commit your changes (git commit -m 'feat: Add new feature').
+5. Push to the branch (git push origin feature/your-feature-name).
+6. Open a Pull Request.
+## 📄 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
