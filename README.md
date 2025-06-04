@@ -77,7 +77,6 @@ You'll need a questions table in your Supabase project.
 ### Quick SQL Setup (Recommended)
 Copy and run the following SQL in your Supabase dashboard's SQL Editor to create the required table:
 ```
-sql
 create table public.questions (
   id uuid primary key default gen_random_uuid(),
   question text not null,
@@ -88,7 +87,6 @@ create table public.questions (
 ```
 Example Insert Statement:
 ```
-sql
 insert into public.questions (question, options, correct) values (
   'What is GDP?',
   '{"a": "Gross Domestic Product", "b": "General Data Protocol", "c": "Global Development Plan", "d": "Government Debt Policy"}',
@@ -127,7 +125,7 @@ Contributions are welcome! If you have suggestions or want to improve the app:
 6. Open a Pull Request.
 ## 📄 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License(https://github.com/DivyanshTiwari20/fin-quiz-app?tab=MIT-1-ov-file). See the LICENSE file for details.
 
 
 
