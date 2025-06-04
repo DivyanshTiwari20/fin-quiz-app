@@ -19,23 +19,16 @@ Welcome to FinQuiz, a dynamic and interactive financial quiz application built w
 
 ## 📸 Screenshots
 
-*(To make your README truly shine, replace these placeholders with actual screenshots of your app!)*
 
 **1. Home/Landing Page**
-*(A compelling shot of your app's entry point)*
-![Home Page](https://via.placeholder.com/800x450?text=Home+Page+Screenshot)
+![Home Page](/public//github-home.png)
 
 **2. Quiz in Progress**
-*(Show a question with options)*
-![Quiz in Progress](https://via.placeholder.com/800x450?text=Quiz+In+Progress+Screenshot)
+![Quiz in Progress](/public//github-quiz.png)
 
 **3. Interim Results Screen**
-*(Show the score summary after a batch)*
-![Interim Results](https://via.placeholder.com/800x450?text=Interim+Results+Screenshot)
+![Interim Results](/public/github-score.png)
 
-**4. Final Results Page**
-*(The final score and coins summary)*
-![Final Results](https://via.placeholder.com/800x450?text=Final+Results+Screenshot)
 
 ---
 
