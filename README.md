@@ -125,7 +125,7 @@ Contributions are welcome! If you have suggestions or want to improve the app:
 6. Open a Pull Request.
 ## 📄 License
 
-This project is licensed under the MIT License(https://github.com/DivyanshTiwari20/fin-quiz-app?tab=MIT-1-ov-file). See the LICENSE file for details.
+This project is licensed under the MIT [License](https://github.com/DivyanshTiwari20/fin-quiz-app?tab=MIT-1-ov-file). See the LICENSE file for details.
 
 
 
