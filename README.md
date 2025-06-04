@@ -19,10 +19,8 @@ Welcome to FinQuiz, a dynamic and interactive financial quiz application built w
 
 ## 📸 Screenshots
 
-*(To make your README truly shine, replace these placeholders with actual screenshots of your app!)*
 
-**1. Home/Landing Page**
-*(A compelling shot of your app's entry point)*
+**1. Home/**
 ![Home Page](/public/desktop.png)
 
 
