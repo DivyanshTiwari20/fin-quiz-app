@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Quiz App',
-  description: 'A fun PWA quiz built with Next.js',
+  title: 'FinLingo',
+  description: 'A Gamified financiall PWA quiz built with Next.js',
   manifest: '/manifest.json',
 };
 
